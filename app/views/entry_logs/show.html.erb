@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @entry_log.phone %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @entry_log.detail %>
+</p>
+
+<%= link_to 'Edit', edit_entry_log_path(@entry_log) %> |
+<%= link_to 'Back', entry_logs_path %>

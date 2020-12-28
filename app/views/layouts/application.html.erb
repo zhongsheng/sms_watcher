@@ -6,7 +6,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://cdn.drmedmk.com/static/tailwind.min.css" type="text/css" media="screen" />
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css" media="screen">
+     input {
+         padding: 3px;
+         border: rgb(51, 65, 85) 1px solid;
+         border-radius: 3px;
+     }
+     label {
+         color: rgb(51, 65, 85);
+     }
+    </style>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield :head %>
     <%= turbo_include_tags %>

@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @account.name %>
-</p>
+<%= turbo_stream_from @account %>
+<%= turbo_frame_tag "account" do %>
+    <p>
+        <strong>Name:</strong>
+        <%= @account.name %>
+    </p>
 
-<p>
-  <strong>Platform:</strong>
-  <%= @account.platform %>
-</p>
-
+    <p>
+        <strong>Platform:</strong>
+        <%= @account.platform %>
+    </p>
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
+
+<% end %>
+
+
+<div id='entry_logs'>
+<%= render @account.entry_logs  %>
+</div>

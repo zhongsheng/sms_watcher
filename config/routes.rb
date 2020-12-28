@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :admins, controllers: { sessions: 'admins/sessions'}
+  root to: 'home#index'
+  # resources :admins
   resources :accounts do
     resources :entry_logs
   end
